@@ -18,5 +18,5 @@ npm run build
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-## Example
+## [Example&rarr;](https://csjiabin.github.io/example-vue/element-custom-table/)
 ![这是一张图](screenshot.png)
