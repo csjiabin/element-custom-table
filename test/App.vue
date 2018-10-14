@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <h1>{{ msg }}</h1>
+    <p><a href="https://github.com/csjiabin/element-custom-table">github</a></p>
     <cs-data-table
       v-loading="loading"
       style="width:1000px;margin:auto;"
