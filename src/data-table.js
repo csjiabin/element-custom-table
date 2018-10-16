@@ -9,19 +9,15 @@ export default {
     ElCard: Card
   },
   mixins: [utils, table, pagination],
-  props: {
-    ...Card.props
-  },
+  props: Card.props,
   render (h, ctx) {
     const renderCardParams = {
       props: this.getProps(Card.props)
     }
-    return (
-      <el-card { ...renderCardParams }>
-        {this.renderSlot('header')}
-        {this.renderTable()}
-        {this.renderPager()}
-      </el-card>
-    )
+    return h('el-card', renderCardParams, [
+      this.renderSlot('header'),
+      this.renderTable(),
+      this.renderPager()
+    ])
   }
 }

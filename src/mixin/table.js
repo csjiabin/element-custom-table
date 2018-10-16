@@ -1,22 +1,19 @@
 import {
   Table
 } from 'element-ui'
-let tableProps = {
-  ...Table.props
-}
+let tableProps = Object.assign({}, Table.props)
 delete tableProps.size
 export default {
   components: {
     ElTable: Table
   },
-  props: {
-    ...tableProps,
+  props: Object.assign({
     tableSize: String, // medium / small / mini
     tableClass: {
       type: String,
       default: ''
     }
-  },
+  }, tableProps),
   methods: {
     clearSelection () {
       this.$refs.table.clearSelection()
@@ -105,13 +102,13 @@ export default {
       this.$emit('expand-change', row, expandedRows)
     },
     renderTable () {
+      const h = this.$createElement
       const renderTableParams = {
         ref: 'table',
         class: this.tableClass,
-        props: {
-          ...this.getProps(Table.props),
+        props: Object.assign({
           size: this.tableSize
-        },
+        }, this.getProps(Table.props)),
         on: {
           'select': this.select,
           'select-all': this.selectAll,
@@ -132,13 +129,11 @@ export default {
           'expand-change': this.expandChange
         }
       }
-      return (
-        <el-table { ...renderTableParams }>
-          {this.renderSlot('default')}
-          {this.renderSlot('append')}
-          {this.renderSlot('empty')}
-        </el-table>
-      )
+      return h('el-table', renderTableParams, [
+        this.renderSlot('default'),
+        this.renderSlot('append'),
+        this.renderSlot('empty')
+      ])
     }
   }
 }

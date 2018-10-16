@@ -7,7 +7,7 @@
       style="width:1000px;margin:auto;"
       :data="data.list"
       ref="table"
-      layout="sizes,prev,pager,next,total"
+      layout="sizes,prev,pager,next,total,slot"
       :total="data.total"
       :current-page.sync="params.page"
       :page-sizes="[5, 10, 15]"
@@ -46,6 +46,9 @@
             size="small">
             detail
           </el-button>
+        </template>
+        <template slot="pager">
+          12356
         </template>
       </cs-table-column>
     </cs-data-table>

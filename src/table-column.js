@@ -2,9 +2,7 @@ import {
   TableColumn
 } from 'element-ui'
 import utils from './mixin/utils.js'
-let tableColumnProps = {
-  ...TableColumn.props
-}
+let tableColumnProps = Object.assign({}, TableColumn.props)
 tableColumnProps.filteredValue = {
   type: Array,
   default: () => []
@@ -23,9 +21,7 @@ export default {
     ElTableColumn: TableColumn
   },
   mixins: [utils],
-  props: {
-    ...tableColumnProps
-  },
+  props: tableColumnProps,
   render (h, ctx) {
     const renderData = {
       props: this.getProps(TableColumn.props)

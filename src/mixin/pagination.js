@@ -1,11 +1,11 @@
-import { Pagination } from 'element-ui'
+import {
+  Pagination
+} from 'element-ui'
 export default {
   components: {
     ElPagination: Pagination
   },
-  props: {
-    ...Pagination.props
-  },
+  props: Pagination.props,
   methods: {
     pageSizeChange (size) {
       this.$emit('page-size-change', size)
@@ -22,6 +22,7 @@ export default {
       this.$emit('page-next-click', page)
     },
     renderPager () {
+      const h = this.$createElement
       const renderPagerParams = {
         style: {
           'margin-top': '16px'
@@ -34,10 +35,8 @@ export default {
           'next-click': this.pageNextClick
         }
       }
-      return (
-        <el-pagination { ...renderPagerParams }>
-          {this.renderSlot('pager')}
-        </el-pagination>
+      return h(
+        'el-pagination', renderPagerParams
       )
     }
   }

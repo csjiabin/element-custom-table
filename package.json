@@ -1,7 +1,7 @@
 {
   "name": "element-custom-table",
   "description": "webpack-simple element-ui custom table",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "author": "csjiabin <1187712426@qq.com>",
   "license": "MIT",
   "private": false,
