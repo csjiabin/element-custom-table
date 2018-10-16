@@ -13,6 +13,7 @@
     "transform-vue-jsx",
     "transform-runtime",
     "syntax-dynamic-import",
+    "transform-object-rest-spread",
     [
       "component",
       {

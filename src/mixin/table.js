@@ -1,6 +1,7 @@
 import {
   Table
 } from 'element-ui'
+import 'element-ui/lib/theme-chalk/table.css'
 let tableProps = Object.assign({}, Table.props)
 delete tableProps.size
 export default {

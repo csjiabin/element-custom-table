@@ -1,6 +1,7 @@
 import {
   Pagination
 } from 'element-ui'
+import 'element-ui/lib/theme-chalk/pagination.css'
 export default {
   components: {
     ElPagination: Pagination
@@ -25,7 +26,8 @@ export default {
       const h = this.$createElement
       const renderPagerParams = {
         style: {
-          'margin-top': '16px'
+          'margin-top': '16px',
+          'text-align': 'center'
         },
         props: this.getProps(Pagination.props),
         on: {

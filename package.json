@@ -1,7 +1,7 @@
 {
   "name": "element-custom-table",
   "description": "webpack-simple element-ui custom table",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "csjiabin <1187712426@qq.com>",
   "license": "MIT",
   "private": false,
@@ -39,6 +39,7 @@
     "babel-plugin-component": "^1.1.1",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-plugin-syntax-jsx": "^6.18.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-plugin-transform-vue-jsx": "^3.7.0",
     "babel-preset-env": "^1.6.0",
